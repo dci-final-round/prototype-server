@@ -1,0 +1,4 @@
+DB_HOST=snippets.sta5o.mongodb.net
+DB_USER=
+DB_PASS=
+DB_NAME=snippets
