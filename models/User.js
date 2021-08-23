@@ -10,8 +10,8 @@ const UserSchema = new mongoose.Schema({
     dates: {
         registered: {type: Date, default: Date.now()},
         last_active: {type: Date}
-    }
-    
+    },
+    savedSnippets: {type:Array, default: []}
 });
 
 const User = mongoose.model("user", UserSchema);
