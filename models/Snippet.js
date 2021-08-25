@@ -7,9 +7,14 @@ const SnippetSchema = new mongoose.Schema({
     content: {type:String, required: true},
     description: {type: String, required: true},
     author: {type: mongoose.Types.ObjectId, ref: 'user', required: true},
-    upvote: {type:Number},
-    downvote:{type:Number},
-    language: {type:String},   //enum
+    upvote: {type:Number, default:0},
+    downvote:{type:Number, default:0},
+    favourite: {type:Boolean, default:false},
+    dates: {
+        created:{type:Date, default:Date.now()},
+        last_edit:{type:Date}
+    },
+    language: {type:String, enum: ['javascript', 'react', 'graphql', 'nodejs', 'python', 'vue', 'angular', 'scss']},   //enum
     tags:{type:Array}  //enum
     
 });
