@@ -3,7 +3,7 @@ DB_USER=
 DB_PASS=
 DB_NAME=snippets
 JWT_SECRET_KEY=qwrty22a68skopqwa9@koab!oppa0s82
-JWT_EXPIRES_IN=90
+JWT_EXPIRES_IN="90d"
 
 
 
