@@ -3,10 +3,10 @@ const passportJWT = require('passport-jwt');
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 function initialize(passport) {
-    ExtractJWT.fromAuthHeaderAsBearerToken()
-    passport.use( new JWTStrategy({
+   
+    passport.use('jwt', new JWTStrategy({
         
-        jwtFromRequest:()=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTI0YzJkMTAyMTVlNzNiM2NjMDUyOWEiLCJpYXQiOjE2Mjk4MTMxODIsImV4cCI6MTYyOTgxMzE4Mn0.7zvxdNuYLs9FVYlH0nEOsrT1GMZV1_hLsA8I7sMzjcA",
+        jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
         secretOrKey: process.env.JWT_SECRET_KEY
     },
     function(jwtPayload, done){

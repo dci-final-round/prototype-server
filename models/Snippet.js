@@ -9,7 +9,7 @@ const SnippetSchema = new mongoose.Schema({
     author: {type: mongoose.Types.ObjectId, ref: 'user', required: true},
     upvote: {type:Number, default:0},
     downvote:{type:Number, default:0},
-    favourite: {type:Boolean},
+    favourite: {type:Boolean, default:false},
     dates: {
         created:{type:Date, default:Date.now()},
         last_edit:{type:Date}
